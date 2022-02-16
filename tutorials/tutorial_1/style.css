@@ -1,0 +1,14 @@
+.tbl{
+  width: 300px;
+  border: 2px solid #000000;  
+}
+.true{
+  width: 30px;
+  height: 30px;
+  background-color: #FFFFFF;
+}
+.false{
+  width: 30px;
+  height: 30px;
+  background-color: #000000;
+}
