@@ -1,13 +1,16 @@
-.tbl{
+.tbl {
   width: 300px;
-  border: 2px solid #000000;  
+  border: 2px solid #000000;
+  margin: 50px auto;
 }
-.true{
+
+.total-true {
   width: 30px;
   height: 30px;
   background-color: #FFFFFF;
 }
-.false{
+
+.total-false {
   width: 30px;
   height: 30px;
   background-color: #000000;

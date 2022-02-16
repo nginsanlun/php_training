@@ -9,21 +9,21 @@
 </head>
 <body>
   <table class="tbl">
-    <?php 
-      for ($row = 1; $row <= 8; $row++){
-        echo "<tr>";
-        for ($col = 1; $col <= 8; $col++){
-          $total = $row + $col;
-          if ($total%2==0){
-            echo "<td class='true'></td>";
-          }
-          else {
-            echo "<td class='false'></td>";
-          }
+		<?php 
+		for ($row = 1; $row <= 8; $row++){
+			echo "<tr>";
+			for ($col = 1; $col <= 8; $col++){
+				$total = $row + $col;
+				if ($total%2==0){
+					echo "<td class='total-true'></td>";
         }
-        echo "</tr>";
+        else {
+          echo "<td class='total-false'></td>";
+              }
       }
-    ?>
+        echo "</tr>";
+    }
+     ?>
   </table>
 </body>
 </html>
