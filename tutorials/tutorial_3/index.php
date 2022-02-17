@@ -1,11 +1,18 @@
 <?php
-function getAge($dob){
-  $bday = new DateTime($dob);
+/**
+ * Show the birthdate
+ * 
+ * @return birthdate
+ */
+function getAge($dateofbirth)
+{
+  $birthday = new DateTime($dateofbirth);
   $today = new Datetime(date('m.d.y'));
-  if ($bday>$today){
+  if ($birthday>$today)
+  {
     return 'You are not born yet';
   }
-  $diff = $today->diff($bday);
+  $diff = $today->diff($birthday);
   return 'Your Current Age is : '.$diff->y.' Years, '.$diff->m.' month, '.$diff->d.' days';
 }
 ?>
@@ -26,14 +33,14 @@ function getAge($dob){
   <form>
     <div class="input-wrapper">
       <label>Input your Date</label>
-      <input type="date" name="dob" value="<?php echo (isset($_GET['dob']))?$_GET['dob']:'';?>">
+      <input type="date" name="dateofbirth" value="<?php echo (isset($_GET['dateofbirth']))?$_GET['dateofbirth']:'';?>">
       <input type="submit" value="Calculate Age" class="calculate-btn">
     </div>
   </form>
   <?php
-    if (isset($_GET['dob']) && $_GET['dob']!=''){?>
+    if (isset($_GET['dateofbirth']) && $_GET['dateofbirth']!=''){?>
       <div class="result-wrapper"> 
-        <?php echo getAge($_GET['dob']);?>
+        <?php echo getAge($_GET['dateofbirth']);?>
       </div>
     <?php }
   ?>
