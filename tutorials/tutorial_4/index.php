@@ -13,10 +13,15 @@
 
 <body>
   <div class="login-form">
+  <?php if (isset($_GET['incorrect'])) : ?>
+    <div class="alert alert-warning">
+      Incorrect Email or Password
+    </div>
+  <?php endif ?>
     <form name="frmUser" method="post" action="login.php">
-      <h2 class="text-center">Log in and Logout</h2>
+      <h2 class="text-center">Log in and Logout</h2> 
       <div class="form-group">
-        <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+        <input type="email" class="form-control" name="email" placeholder="Email" required="required">
       </div>
       <div class="form-group">
         <input type="password" autocomplete="off" class="form-control" placeholder="Password" name="password" required="required">

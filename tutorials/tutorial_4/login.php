@@ -1,11 +1,14 @@
 <?php
 session_start();
-$username = $_POST['username'];
+$email = $_POST['email'];
 $password = $_POST['password'];
  
-if ($username == 'san' and $password == 'san123'){     
-    $_SESSION['user'] = ['username' => 'san'];
+if ($email === 'san@test.com' and $password === 'san123'){     
+    $_SESSION['email'] = ['email' => 'san@test.com'];
     echo "Logged in successfully";
+}
+else{
+  header('location: index.php?incorrect=1');
 }
 
 ?>
