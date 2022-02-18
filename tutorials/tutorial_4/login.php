@@ -5,7 +5,7 @@ $password = $_POST['password'];
  
 if ($email === 'san@test.com' and $password === 'san123'){     
     $_SESSION['email'] = ['email' => 'san@test.com'];
-    echo "Logged in successfully";
+    echo "<h3 style='text-align:center'>Logged in successfully</h3>";
 }
 else{
   header('location: index.php?incorrect=1');
