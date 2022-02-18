@@ -4,9 +4,9 @@
  * 
  * @return birthdate
  */
-function getAge($dateofbirth)
+function getAge($dateOfBirth)
 {
-  $birthday = new DateTime($dateofbirth);
+  $birthday = new DateTime($dateOfBirth);
   $today = new Datetime(date('m.d.y'));
   if ($birthday>$today)
   {
@@ -33,14 +33,14 @@ function getAge($dateofbirth)
   <form>
     <div class="input-wrapper">
       <label>Input your Date</label>
-      <input type="date" name="dateofbirth" value="<?php echo (isset($_GET['dateofbirth']))?$_GET['dateofbirth']:'';?>">
+      <input type="date" name="dateOfBirth" value="<?php echo (isset($_GET['dateOfBirth']))?$_GET['dateOfBirth']:'';?>">
       <input type="submit" value="Calculate Age" class="calculate-btn">
     </div>
   </form>
   <?php
-    if (isset($_GET['dateofbirth']) && $_GET['dateofbirth']!=''){?>
+    if (isset($_GET['dateOfBirth']) && $_GET['dateOfBirth']!=''){?>
       <div class="result-wrapper"> 
-        <?php echo getAge($_GET['dateofbirth']);?>
+        <?php echo getAge($_GET['dateOfBirth']);?>
       </div>
     <?php }
   ?>
