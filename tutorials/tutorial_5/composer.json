@@ -1,0 +1,13 @@
+{
+    "name": "bib/tutorial_5",
+    "autoload": {
+        "psr-4": {
+            "Bib\\Tutorial5\\": "src/"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.21",
+        "league/csv": "^9.8",
+        "phpoffice/phpword": "^0.18.3"
+    }
+}
